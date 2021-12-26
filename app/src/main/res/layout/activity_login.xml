@@ -13,6 +13,7 @@
         android:hint=" Email"
         android:autofillHints="emailAddress"
         android:inputType="text"
+        android:padding="20dp"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:layout_marginTop="50dp"/>
 
@@ -24,6 +25,7 @@
         android:autofillHints="password"
         android:inputType="textPassword"
         android:layout_marginTop="50dp"
+        android:padding="20dp"
         android:drawableLeft="@drawable/ic_baseline_lock_open_24"
         android:layout_below="@+id/username1"/>
 

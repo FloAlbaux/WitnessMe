@@ -10,10 +10,10 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="User Name"
-        android:autofillHints="username"
-        android:inputType="text"
-        android:layout_marginTop="50dp"/>
+        android:hint="Email"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/password"
@@ -22,7 +22,7 @@
         android:hint="Password"
         android:autofillHints="password"
         android:inputType="textPassword"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/username"/>
 
     <EditText
@@ -32,23 +32,69 @@
         android:hint="Retype Password"
         android:autofillHints="password"
         android:inputType="textPassword"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/password"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="389dp"
+        android:layout_height="169dp"
+        android:layout_below="@id/repassword"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:spinnersShown="true" />
 
     <Button
         android:id="@+id/btnsignup"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purple_700"
+        android:textColor="@color/white"
         android:text="Register"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/repassword"/>
+        android:layout_below="@+id/datePicker"/>
 
-    <Button
-        android:id="@+id/btnsignin"
+    <TextView
+        android:id="@+id/account"
+        android:layout_below="@id/btnsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alreday have an account ? Sign in !"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/others"
+        android:layout_above="@id/socialicons"
+        android:text="You can also sing up with :"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Existing user! Go to Sign in page"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/btnsignup"/>
+        android:id="@+id/socialicons"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/google"/>
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/facebook"/>
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/twitter"/>
+    </LinearLayout>
 
 </RelativeLayout>
