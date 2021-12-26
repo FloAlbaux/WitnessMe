@@ -39,7 +39,7 @@ public class ServerHelper extends SQLiteOpenHelper {
         return cursor.getCount() > 0;
     }
 
-    public Boolean checkusernamepassword(String username, String password){
+    public Boolean checkUserLogin(String username, String password){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         @SuppressLint("Recycle") Cursor cursor = MyDB.rawQuery("Select * from users where username = ? and password = ?", new String[] {username,password});
         return cursor.getCount() > 0;
